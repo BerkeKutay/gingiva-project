@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.result-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* 📸 GÖRÜNTÜ */
+.image-container {
+    max-width: 480px;
+    margin: auto;
+}
+
+.result-img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* 🧊 CAM KART */
+.info-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(6px);
+    padding: 16px 18px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+/* ⚠ RENKSİZ UYARI */
+.doctor-warning {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 🔘 BUTON */
+.btn {
+    display: inline-block;
+    margin: 30px auto 0;
+    padding: 12px 22px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* 📱 MOBİL */
+@media (max-width: 900px) {
+    .result-layout {
+        grid-template-columns: 1fr;
+    }
+}
