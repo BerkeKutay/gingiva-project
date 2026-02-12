@@ -31,7 +31,8 @@ The dataset consists of annotated intraoral images for periodontal analysis.
 
 Below are the training and validation metrics obtained during model training:
 
-![Training Results](results.png)
+![Training Results](runs/detect/a/dis_eti_clean/results.png)
+
 
 
 ## Model Weights
