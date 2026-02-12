@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Diş Eti Analiz Sonucu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="page-title">🦷 Diş Eti Analiz Sonucu</h1>
+
+    <div class="result-layout">
+        <div class="image-container">
+            <img class="result-img"
+                 src="{{ url_for('static', filename='results/' + image) }}">
+        </div>
+
+        <div>
+            <h2 class="section-title">Tespitler</h2>
+
+            {% for d in detections %}
+            <div class="info-card">
+                <h3>{{ d.name }} – %{{ d.conf }}</h3>
+                <b>Konum:</b> {{ d.konum }}<br>
+                <b>Diş No:</b> {{ d.dis_no }}<br>
+                <b>Risk:</b> {{ d.risk }}<br><br>
+
+                <b>Açıklama:</b> {{ d.aciklama }}<br>
+                <b>Öneri:</b> {{ d.oneriler }}
+
+                {% if d.uyari %}
+                <div class="doctor-warning">
+                    ⚠ Doktora başvurmanız önerilir
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <a href="/" class="btn">🔁 Yeni Analiz</a>
+</div>
+
+</body>
+</html>
