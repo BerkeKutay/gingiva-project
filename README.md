@@ -12,15 +12,16 @@ This project aims to develop a computer vision model capable of detecting gingiv
 
 ## Project Structure
 
-├── Dataset/                         # Dataset information and related files
-├── runs/detect/a/dis_eti_clean/     # Training results and evaluation outputs
-├── static/                          # Static files for web interface
-├── templates/                       # HTML templates for Flask app
-├── app.py                           # Flask application entry point
-├── dataset.yaml                     # YOLO dataset configuration
-├── main.ipynb                       # Model training notebook
-├── requirements.txt                 # Project dependencies
-└── README.md                        # Project documentation
+├── Dataset/             # Dataset information
+├── runs/                # Training results and evaluation outputs
+├── static/              # Static files for web interface
+├── templates/           # HTML templates (Flask)
+├── app.py               # Application entry point
+├── dataset.yaml         # YOLO dataset configuration
+├── main.ipynb           # Model training notebook
+├── requirements.txt     # Project dependencies
+└── README.md
+
 
 
 ## Dataset
