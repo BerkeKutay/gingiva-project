@@ -26,12 +26,13 @@ The dataset consists of annotated intraoral images for periodontal analysis.
 - Task: Periodontal region detection
 - Training environment: Jupyter Notebook
 
-## Model Performance
 
-- Accuracy: 91%
-- Precision: 89%
-- Recall: 87%
-- mAP: 0.85
+## Training Results
+
+Below are the training and validation metrics obtained during model training:
+
+![Training Results](results.png)
+
 
 ## Model Weights
 
