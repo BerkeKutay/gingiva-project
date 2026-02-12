@@ -10,6 +10,16 @@ Early detection is critical for preventing severe complications.
 
 This project aims to develop a computer vision model capable of detecting gingival and periodontal conditions from intraoral images using deep learning techniques.
 
+## Project Structure
+
+├── app.py  
+├── main.ipynb  
+├── requirements.txt  
+├── static/  
+├── templates/  
+├── runs/  
+└── README.md  
+
 ## Dataset
 
 The model was trained using the following publicly available dataset:
@@ -17,7 +27,8 @@ The model was trained using the following publicly available dataset:
 Mendeley Data:
 https://data.mendeley.com/datasets/3253gj88rr/1
 
-The dataset consists of annotated intraoral images for periodontal analysis.
+The dataset contains annotated intraoral images labeled for periodontal detection. 
+Bounding box annotations were used for object detection training.
 
 ## Model Architecture
 
@@ -26,6 +37,16 @@ The dataset consists of annotated intraoral images for periodontal analysis.
 - Task: Periodontal region detection
 - Training environment: Jupyter Notebook
 
+## Technologies Used
+
+- Python
+- PyTorch
+- YOLO
+- OpenCV
+- Flask
+- Hugging Face Hub
+
+
 
 ## Training Results
 
@@ -33,7 +54,16 @@ Below are the training and validation metrics obtained during model training:
 
 ![Training Results](runs/detect/a/dis_eti_clean/results.png)
 
+The model demonstrates stable convergence during training.
 
+- Training losses (box, classification, and DFL) decrease consistently.
+- Validation losses remain relatively stable.
+- mAP@50 reached approximately 0.49.
+- mAP@50-95 reached approximately 0.34.
+- Precision ≈ 0.48
+- Recall ≈ 0.61
+
+The training and validation curves show generally stable behavior with no severe overfitting observed.
 
 ## Model Weights
 
@@ -50,6 +80,7 @@ git clone https://github.com/BerkeKutay/gingiva-project.git
 cd gingiva-project
 pip install -r requirements.txt
 
+
 ## Future Improvements
 
 - Model performance optimization
@@ -59,5 +90,6 @@ pip install -r requirements.txt
 
 ## Author
 
-Developed by Kutay Berke  
-AI & Computer Vision Enthusiast
+Berke Kutay
+Computer Engineering Student | AI & Computer Vision  
+
