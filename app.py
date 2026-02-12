@@ -9,6 +9,24 @@ RESULT_FOLDER = "static/results"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(RESULT_FOLDER, exist_ok=True)
 
+from huggingface_hub import hf_hub_download
+import os
+
+MODEL_DIR = "runs/detect/a/dis_eti_clean/weights"
+MODEL_PATH = os.path.join(MODEL_DIR, "best.pt")
+
+if not os.path.exists(MODEL_PATH):
+    os.makedirs(MODEL_DIR, exist_ok=True)
+    
+    downloaded_path = hf_hub_download(
+        repo_id="Kutay0/gingiva-periodontal-detection",
+        filename="best.pt"
+    )
+    
+    os.rename(downloaded_path, MODEL_PATH)
+
+
+
 model = YOLO("runs/detect/a/dis_eti_clean/weights/best.pt")
 
 INFO = {
